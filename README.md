@@ -7,5 +7,5 @@ Platform: Android v?
 
 # Contents of Repository
 
-## 1 Documentation
-## 1.1 SRS
+## [1 Documentation](https://github.com/Shalynishka/ExRates/tree/master/docs)
+## [1.1 SRS](https://github.com/Shalynishka/ExRates/blob/master/docs/Requirements.md)
