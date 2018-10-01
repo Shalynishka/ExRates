@@ -2,6 +2,7 @@
 Mobile application for rates online.
 
 Language: Python 3.6
+
 Platform: Android v?
 
 # Contents of Repository
