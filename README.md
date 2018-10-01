@@ -1,4 +1,4 @@
-# ExRates - your assistent in the fincial market!
+# ExRates - your assistent in the financial market!
 Mobile application for rates online.
 
 Language: Python 3.6
