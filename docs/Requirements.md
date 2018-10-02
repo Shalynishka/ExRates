@@ -38,17 +38,61 @@
 
 ## 2.2 Интерфейс пользователя
 
-![](https://github.com/Shalynishka/ExRates/blob/master/docs/mockups/start.png)
+<p align = "center">
+<img width = "282" height = "573" src="https://github.com/Shalynishka/ExRates/blob/master/docs/mockups/start2.png">
+</p>
 
+<p align = "center">
 Изображение 1 - стартовое окно
+</p>
 
-![](https://github.com/Shalynishka/ExRates/blob/master/docs/mockups/menu.png)
+<p align = "center">
+<img width = "282" height = "573" src="https://github.com/Shalynishka/ExRates/blob/master/docs/mockups/menu2.png">
+</p>
 
+<p align = "center">
 Изображение 2 - меню
+</p>
 
-![](https://github.com/Shalynishka/ExRates/blob/master/docs/mockups/all%20currency.png)
+<p align = "center">
+<img width = "282" height = "573" src="https://github.com/Shalynishka/ExRates/blob/master/docs/mockups/all%20currencies2.png">
+</p>
 
-Изображение 3 - меню "Все валюты"
+<p align = "center">
+Изображение 3 - "Все валюты"
+</p>
+
+<p align = "center">
+<img width = "282" height = "573" src="https://github.com/Shalynishka/ExRates/blob/master/docs/mockups/Find%20currency2.png">
+</p>
+
+<p align = "center">
+Изображение 4 - "Найти валюту"
+</p>
+
+<p align = "center">
+<img width = "282" height = "573" src="https://github.com/Shalynishka/ExRates/blob/master/docs/mockups/Resources2.png">
+</p>
+
+<p align = "center">
+Изображение 5 - "Ресурсы"
+</p>
+
+<p align = "center">
+<img width = "282" height = "573" src="https://github.com/Shalynishka/ExRates/blob/master/docs/mockups/Cryptocurrency2.png">
+</p>
+
+<p align = "center">
+Изображение 6 - "Криптовалюта"
+</p>
+
+<p align = "center">
+<img width = "282" height = "573" src="https://github.com/Shalynishka/ExRates/blob/master/docs/mockups/converter2.png">
+</p>
+
+<p align = "center">
+Изображение 7 - "Конвертер"
+</p>
 
 ## 2.3 Характеристики пользователей
 
