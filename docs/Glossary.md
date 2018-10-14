@@ -8,3 +8,4 @@ Favorites | Most used currency
 Resources | Market Value Resources
 Crypts    | Cryptocurrency
 Converter | Option that converts currencies
+Update    | Application updates data about currencies and resources
