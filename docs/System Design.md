@@ -16,7 +16,7 @@
 # 1. Use Case Diagram <a name = "1"></a>
 
 <p align = "center">
-<img width = "1178" height = "797" src="https://github.com/Shalynishka/ExRates/blob/master/Diagrams/Use%20case.png">
+<img width = "1178" height = "797" src="https://github.com/Shalynishka/ExRates/blob/master/docs/Diagrams/Use%20case.png">
 </p>
 
 ## 1.1 Actors <a name = "1.1"></a>
@@ -100,7 +100,7 @@ Flow of events:
 When user selects menu "All currencies" an application checks Internet acces. In case of lack of access, the application uses saved information about currencies and display it. Otherwise the app updates data about currencies and display fresh information.
 
 <p align = "center">
-<img width = "1665" height = "789" src="https://github.com/Shalynishka/ExRates/blob/master/Diagrams/Activity.png">
+<img width = "1665" height = "789" src="https://github.com/Shalynishka/ExRates/blob/master/docs/Diagrams/Activity.png">
 </p>
 
 
