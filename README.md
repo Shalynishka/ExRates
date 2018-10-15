@@ -9,3 +9,4 @@ Platform: Android v?
 
 ## [1 Documentation](https://github.com/Shalynishka/ExRates/tree/master/docs)
 ## [1.1 SRS](https://github.com/Shalynishka/ExRates/blob/master/docs/Requirements.md)
+## [1.2 SDS](https://github.com/Shalynishka/ExRates/blob/master/docs/System%20Design.md)
