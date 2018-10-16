@@ -12,12 +12,12 @@
     1.2.6. [Check crypts](#1.2.6) <br>
     1.2.7. [Converter](#1.2.7) <br>
  2. [Activity Diagram](#2) <br>
+ 3. [States Diagram](#3) <br>
+ 4. [Sequence Diagram](#4) <br>
 
 # 1. Use Case Diagram <a name = "1"></a>
 
-<p align = "center">
-<img width = "886" height = "540" src="https://github.com/Shalynishka/ExRates/blob/master/docs/Diagrams/Use%20case.png">
-</p>
+Use case diagram is [here](https://github.com/Shalynishka/ExRates/blob/master/docs/Diagrams/Use%20case.png).
 
 ## 1.1 Actors <a name = "1.1"></a>
 
@@ -99,8 +99,15 @@ Flow of events:
 
 When user selects menu "All currencies" an application checks Internet acces. In case of lack of access, the application uses saved information about currencies and display it. Otherwise the app updates data about currencies and display fresh information.
 
-<p align = "center">
-<img width = "1000" height = "400" src="https://github.com/Shalynishka/ExRates/blob/master/docs/Diagrams/Activity.png">
-</p>
+Activity diagram is [here](https://github.com/Shalynishka/ExRates/blob/master/docs/Diagrams/Activity.png).
 
+
+# 3. States Diagram <a name = "3"></a>
+
+States diagram is [here](https://github.com/Shalynishka/ExRates/blob/master/docs/Diagrams/States.png).
+
+
+# 4. Sequence Diagram <a name = "4"></a>
+
+Sequence diagram is [here](https://github.com/Shalynishka/ExRates/blob/master/docs/Diagrams/Sequence.png).
 
