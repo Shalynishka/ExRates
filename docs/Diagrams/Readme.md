@@ -10,3 +10,7 @@ This folder contains diagrams.
 
 # 4. [States](https://github.com/Shalynishka/ExRates/blob/master/docs/Diagrams/States.png)
 
+# 4. [Class](https://github.com/Shalynishka/ExRates/blob/master/docs/Diagrams/Class.png)
+
+# 4. [Deployment](https://github.com/Shalynishka/ExRates/blob/master/docs/Diagrams/Deploy.png)
+

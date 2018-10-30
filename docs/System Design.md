@@ -14,6 +14,8 @@
  2. [Activity Diagram](#2) <br>
  3. [States Diagram](#3) <br>
  4. [Sequence Diagram](#4) <br>
+ 5. [Class Diagram](#5) <br>
+ 6. [Deployment Diagram](#6) <br>
 
 # 1. Use Case Diagram <a name = "1"></a>
 
@@ -111,3 +113,10 @@ States diagram is [here](https://github.com/Shalynishka/ExRates/blob/master/docs
 
 Sequence diagram is [here](https://github.com/Shalynishka/ExRates/blob/master/docs/Diagrams/Sequence.png).
 
+# 5. Sequence Diagram <a name = "5"></a>
+
+Class diagram is [here](https://github.com/Shalynishka/ExRates/blob/master/docs/Diagrams/Class.png).
+
+# 6. Sequence Diagram <a name = "6"></a>
+
+Deployment diagram is [here](https://github.com/Shalynishka/ExRates/blob/master/docs/Diagrams/Deploy.png).
