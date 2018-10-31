@@ -119,4 +119,4 @@ Class diagram is [here](https://github.com/Shalynishka/ExRates/blob/master/docs/
 
 # 6. Deployment Diagram <a name = "6"></a>
 
-Deployment diagram is [here](https://github.com/Shalynishka/ExRates/blob/master/docs/Diagrams/Deploy.png).
+Deployment diagram is [here](https://github.com/Shalynishka/ExRates/blob/master/docs/Diagrams/Deployment.png).
