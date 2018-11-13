@@ -1,5 +1,4 @@
-﻿from Item import Item
-from datetime import datetime
+﻿from item import Item
 
 
 class Currency(Item):
@@ -20,15 +19,24 @@ class Currency(Item):
                 symbol
                 fav
 
-            todo: Load and Store info
         """
     __symbol = ''
-    __fav = False
+    __fav_status = False
 
-    def __init__(self,  name: str, s_n: str, icon, rate: float, date: datetime.date, s: str, f: bool):
-        super().__init__(name, s_n, icon, rate, date)
-        self.__symbol = s
-        self.__fav = f
+    # (self, name: str, short: str, icon, rate: float, date: datetime.date, symbol: str, fav: bool):
+    def __init__(self, **kwargs):
+        super().__init__(**kwargs)
+        self.__symbol = kwargs['symbol']
+        self.__fav_status = kwargs['fav']
+
+    """AKA get info"""
+    def __dict__(self) -> dict:
+        return {'name': self.name,
+                'short': self.short,
+                'rate': self.rate,
+                'date': self.date,
+                'symbol': self.symbol,
+                'fav': self.fav_s}
 
     """symbol of currency"""
     @property
@@ -41,26 +49,9 @@ class Currency(Item):
 
     """favorite status"""
     @property
-    def fav(self):
-        return self.__symbol
+    def fav_s(self):
+        return self.__fav_status
 
-    @fav.setter
-    def fav(self, f):
-        self.__fav = f
-
-    """AKA get info"""
-    def __dict__(self) -> dict:
-        return {'name': self.name,
-                'short': self.s_name,
-                'rate': self.rate,
-                'date': self.date,
-                'symbol': self.symbol,
-                'fav': self.fav}
-
-
-c = Currency('name12', 'sn', 'Icon1', .23, datetime.date(datetime.now()), 'A', False)
-
-print(c.__dict__())
-
-
-
+    @fav_s.setter
+    def fav_s(self, f):
+        self.__fav_status = f

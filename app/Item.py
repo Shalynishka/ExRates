@@ -1,14 +1,11 @@
-﻿from datetime import datetime
-
-
-class Item:
+﻿class Item:
     """
     Class for Item. It contains general characteristics for Currencies and Resources
     Attributes:
         __name   - name of Item
-        __s_name - short name of Item
+        __short - short name of Item
         __icon   - mini image of Item
-        __rate   - rate of Item
+        __rate   - rate of Item [1 $ to 2.1431 by]
         __date   - date of last update of Item
 
     Methods and properties:
@@ -24,17 +21,17 @@ class Item:
         todo: Icon and work with it
     """
     __name = ''
-    __s_name = ''
+    __short = ''
     __icon = 'Some'   # по имени подгружать иконку? Тогда не нужен конструктор
     __rate = .0
     __date = ''
 
-    def __init__(self, name: str, s_n: str, icon, rate: float, date: datetime.date):
-        self.__name = name
-        self.__s_name = s_n
-        self.__icon = icon
-        self.__rate = rate
-        self.__date = date
+    def __init__(self, **kwargs):   # (name: str, s_n: str, icon, rate: float, date: datetime.date)
+        self.__name = kwargs['name']
+        self.__short = kwargs['short']
+        self.__icon = kwargs['short'] + '.atr'
+        self.__rate = kwargs['rate']
+        self.__date = kwargs['date']
 
     """name of item"""
     @property
@@ -47,12 +44,12 @@ class Item:
 
     """short name of item"""
     @property
-    def s_name(self):
-        return self.__s_name
+    def short(self):
+        return self.__short
 
-    @s_name.setter
+    @short.setter
     def s_name(self, sn):
-        self.__s_name = sn
+        self.__short = sn
 
     """rate of item"""
     @property
@@ -72,13 +69,11 @@ class Item:
     def date(self, d):
         self.__date = d
 
+    """icon"""
+    @property
+    def icon(self):
+        return self.__icon
 
-s = Item('name', 's_n', 'icon', .5, datetime.today())
-
-print(s.name)
-s.name = 'hello'
-print(s.name)
-
-
-dd = datetime.date(datetime.today())
-print(dd)
+    @icon.setter
+    def icon(self, i):
+        self.__icon = i
