@@ -1,0 +1,78 @@
+Canadian Dollar - CAD
+Chilean Peso - CLP
+Jordanian Dinar - JOD
+Kuwaiti Dinar - KWD
+Lebanese Pound - LBP
+Libyan Dinar - LYD
+Singapore Dollar - SGD
+Swiss Franc - CHF
+Pound Sterling - GBP
+US Dollar - USD
+Australian Dollar - AUD
+Armenian Dram - AMD
+Bulgarian Lev - BGN
+Tugrik - MNT
+New Zealand Dollar - NZD
+Hryvnia - UAH
+Danish Krone - DKK
+Euro - EUR
+Zloty - PLN
+Iceland Krona - ISK
+Yen - JPY
+Moldovan Leu - MDL
+Norwegian Krone - NOK
+Russian Ruble - RUB
+SDR (Special Drawing Right) - XDR
+Som - KGS
+Tenge - KZT
+Turkish Lira - TRY
+Iranian Rial - IRR
+Yuan Renminbi - CNY
+Czech Koruna - CZK
+Swedish Krona - SEK
+Algerian Dinar - DZD
+Argentine Peso - ARS
+Afghani - AFN
+Baht - THB
+Bolivar - VEF
+Brazilian Real - BRL
+Won - KRW
+Hong Kong Dollar - HKD
+Denar - MKD
+UAE Dirham - AED
+Dong - VND
+Egyptian Pound - EGP
+Indian Rupee - INR
+Iraqi Dinar - IQD
+Kenyan Shilling - KES
+Colombian Peso - COP
+Kuna - HRK
+Lari - GEL
+Lek - ALL
+Malaysian Ringgit - MYR
+Moroccan Dirham - MAD
+Mexican Peso - MXN
+Naira - NGN
+Nepalese Rupee - NPR
+New Israeli Sheqel - ILS
+Sol - PEN
+New Taiwan Dollar - TWD
+Turkmenistan New Manat - TMT
+Pakistan Rupee - PKR
+Romanian Leu - RON
+Rupiah - IDR
+Rand - ZAR
+Saudi Riyal - SAR
+Serbian Dinar - RSD
+Syrian Pound - SYP
+Somoni - TJS
+Sudanese Pound - SDG
+Uzbekistan Sum - UZS
+Peso Uruguayo - UYU
+Philippine Peso - PHP
+Forint - HUF
+Sri Lanka Rupee - LKR
+Ethiopian Birr - ETB
+Tunisian Dinar - TND
+Lao Kip - LAK
+Azerbaijan Manat - AZN
