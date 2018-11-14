@@ -49,7 +49,7 @@
         return self.__short
 
     @short.setter
-    def s_name(self, sn):
+    def short(self, sn):
         self.__short = sn
 
     """rate of item"""
