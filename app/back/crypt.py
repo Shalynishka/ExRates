@@ -1,4 +1,4 @@
-﻿from item import Item
+﻿from back.item import Item
 
 
 class Crypt(Item):
@@ -12,14 +12,13 @@ class Crypt(Item):
 
             __init__(self, name, s_n, icon, rate, date, s, f)
             __dict__(self) - return all info in dict
-
-        """
+    """
 
     # (self, name: str, s_n: str, icon, rate: float, date: datetime.date, s: str, f: bool):
     def __init__(self, **kwargs):
         super().__init__(**kwargs)
 
-    """AKA get info"""
+    """get info"""
     def __dict__(self) -> dict:
         return {'name': self.name,
                 'short': self.short,

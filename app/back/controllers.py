@@ -1,7 +1,7 @@
 ﻿import pickle
-from currency import Currency
-from crypt import Crypt
-from resource import Resource
+from back.currency import Currency
+from back.crypt import Crypt
+from back.resource import Resource
 from datetime import datetime
 import requests
 import os
@@ -80,7 +80,8 @@ class CurController(Controller):
     Properties:
         cur -> __cur - setter and getter~
         fav -> __fav - setter and getter~
-        """
+    """
+
     __cur = []
     __fav_cur = []
 
@@ -135,7 +136,6 @@ class CurController(Controller):
                 if self.cur and self.cur[i].fav_s:
                     fv.append(cr[-1])
             except:
-                print('bad')
                 continue
         self.__cur = cr
         self.__fav_cur = fv
@@ -243,5 +243,3 @@ class CryptController(Controller):
         self.__crypt = crypts
         self.clear('crypt.txt')
         self.store('crypt.txt', self.crypt)
-
-

@@ -1,4 +1,4 @@
-﻿from item import Item
+﻿from back.item import Item
 
 
 class Currency(Item):
@@ -18,8 +18,8 @@ class Currency(Item):
             properties(getter~+setter):
                 symbol
                 fav
+    """
 
-        """
     __symbol = ''
     __fav_status = False
 
@@ -29,7 +29,7 @@ class Currency(Item):
         self.__symbol = kwargs['symbol']
         self.__fav_status = kwargs['fav']
 
-    """AKA get info"""
+    """get info"""
     def __dict__(self) -> dict:
         return {'name': self.name,
                 'short': self.short,

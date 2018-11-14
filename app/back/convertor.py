@@ -1,4 +1,18 @@
 class Converter:
+    """
+        Class for Crypto-currency. It contains Crypto-currency information.
+        Child from Item
+
+        Attributes:
+            __rates - list of currency to convert
+        Methods and properties:
+            properties:
+                rates - getter + setter
+
+            del_rate(self, short)         - delete currency from __rates
+            convert(self, rate_name, num) - return dict of convert values
+    """
+
     __rates = []
 
     @property

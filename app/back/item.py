@@ -20,6 +20,7 @@
 
         todo: Icon and work with it
     """
+
     __name = ''
     __short = ''
     __icon = 'Some'   # по имени подгружать иконку? Тогда не нужен конструктор
