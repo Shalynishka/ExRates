@@ -23,7 +23,7 @@ class CryptItem:
             Rectangle(pos=root.pos, size=root.size)
 
         b = BoxLayout(size_hint=(1, .9))
-        i1 = Image(size_hint=(.3, 1), source=paths.images + 'crypts/{}.svg'.format(self.item.short))
+        i1 = Image(size_hint=(None, None), source=paths.images + 'crypts/{}.svg'.format(self.item.short))
         i1.width = '60dp'
         i1.height = '60dp'
 
@@ -49,7 +49,7 @@ class CryptItem:
         g2 = GridLayout(spacing='30dp', padding='20dp', rows=2)
 
         a3 = AnchorLayout()
-        l3 = Label(color=(0, 0, 0, 1), font_size='20dp', text=str(self.item.rate) + '$')
+        l3 = Label(color=(0, 0, 0, 1), font_size='20dp', text='{0:.2f}'.format(self.item.rate) + '$')
         a3.add_widget(l3)
 
         g2.add_widget(a3)

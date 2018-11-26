@@ -40,7 +40,7 @@ class ConvertItem:
 
         # содержит картинку
         b0 = BoxLayout(size_hint=(1, 1), id='box_root')
-        i1 = Image(size_hint=(.3, 1), source=paths.images + 'flags/{}.svg'.format(self.item.short))
+        i1 = Image(size_hint=(None, None), source=paths.images + 'flags/{}.png'.format(self.item.short))
         i1.width = '60dp'
         i1.height = '60dp'
 

@@ -1,5 +1,3 @@
-from kivy.lang import Builder
-from kivy.properties import ObjectProperty
 from kivy.uix.boxlayout import BoxLayout
 from kivy.uix.gridlayout import GridLayout
 from kivy.uix.image import Image
@@ -25,7 +23,7 @@ class ResItem:
             Rectangle(pos=root.pos, size=root.size)
 
         b = BoxLayout(size_hint=(1, .9))
-        i1 = Image(size_hint=(.3, 1), source=paths.images + 'res/{}.svg'.format(self.item.name))   # todo crypt icons
+        i1 = Image(size_hint=(None, None), source=paths.images + 'res/{}.svg'.format(self.item.name))   # todo crypt icons
         i1.width = '55dp'
         i1.height = '55dp'
 
@@ -38,7 +36,7 @@ class ResItem:
 
         # короткое имя
         a2 = AnchorLayout()
-        l2 = Label(color=(0, 0, 0, 1), font_size='20dp', text=str(self.item.rate) + '$')
+        l2 = Label(color=(0, 0, 0, 1), font_size='20dp', text='{0:.2f}'.format(self.item.rate) + '$')
         a2.add_widget(l2)
 
         b1 = BoxLayout(spacing='30dp', padding='20dp')

@@ -9,13 +9,14 @@ class Find(Screen):
 
     c = None
     change_fav = None
+    r = None
 
-    def load(self, controller, change_fav):
+    def load(self, controller, change_fav, refresh):
         self.c = controller
         self.change_fav = change_fav
+        self.r = refresh
 
     def find(self):
-        print('hello')
         self.remove_w()
         for value in self.c.find_cur(self.search.text).values():
             self.add_w(self.c.cur[value.short])
@@ -27,3 +28,7 @@ class Find(Screen):
     def add_w(self, item):
         fi1 = FullItem(item, self.change_fav).build()
         self.ids['items'].add_widget(fi1)
+
+    def refresh(self):
+        self.r()
+        self.find()

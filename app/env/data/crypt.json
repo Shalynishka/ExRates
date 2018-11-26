@@ -2,35 +2,35 @@
     "BTC": {
         "name": "Bitcoin",
         "short": "BTC",
-        "rate": 3801.19,
+        "rate": 3664.85,
         "date": "2018-11-26",
         "symbol": "$"
     },
     "ETH": {
         "name": "Ethereum",
         "short": "ETH",
-        "rate": 110.27,
+        "rate": 105.84,
         "date": "2018-11-26",
         "symbol": "$"
     },
     "LTC": {
         "name": "Litecoin",
         "short": "LTC",
-        "rate": 29.65,
+        "rate": 29,
         "date": "2018-11-26",
         "symbol": "$"
     },
     "BCH": {
         "name": "Bitcoin Cash",
         "short": "BCH",
-        "rate": 191.33,
+        "rate": 193.92,
         "date": "2018-11-26",
         "symbol": "$"
     },
     "EOS": {
         "name": "EOS",
         "short": "EOS",
-        "rate": 3.26,
+        "rate": 3.15,
         "date": "2018-11-26",
         "symbol": "$"
     }

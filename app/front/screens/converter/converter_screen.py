@@ -27,4 +27,4 @@ class Convert(Screen):
         num = self.curs[zero_name].input.text + addition
         if num:
             for (name, value) in self.cv.convert(zero_name, float(num)).items():
-                self.curs[name].input.text = str(round(value, 2))
+                self.curs[name].input.text = '{0:.2f}'.format(value)

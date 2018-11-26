@@ -30,7 +30,7 @@ class ReduceItem:
 
         # содержит картинку
         a2 = AnchorLayout(anchor_x='right', anchor_y='center')
-        i1 = Image(size_hint=(None, None), source=paths.images + 'flags/{}.svg'.format(self.short))
+        i1 = Image(size_hint=(None, None), source=paths.images + 'flags/{}.png'.format(self.short))
         # i1.width = '60dp'
         # i1.height = '60dp'
         a2.add_widget(i1)

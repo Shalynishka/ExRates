@@ -150,25 +150,13 @@ class CurController(Controller):
             self.store(paths.data + 'cur.json', cr)
 
     """find currency"""
-    @staticmethod
-    def find_cur(name: str) -> dict:
+    def find_cur(self, name: str) -> dict:
         cur = {}
-        date = datetime.date(datetime.now())
-        items_list = []
         with open(paths.data + 'find.json', 'r') as f:
             items_list = json.loads(f.read())
         for short, full in items_list:
             if name in short or name in full or name in short.lower() or name in full.lower():
-                print(full)
-                try:
-                    r = requests.get('http://www.nbrb.by/API/ExRates/Rates/{}?ParamMode=2'.format(short)).json()
-                    rate = [r['Cur_Scale'], r['Cur_OfficialRate']]
-                    d = requests.get('http://www.nbrb.by/API/ExRates/Currencies/' + str(r['Cur_ID'])).json()
-                    cr = (Currency(name=d['Cur_Name_Eng'], short=d['Cur_Abbreviation'], rate=rate,
-                                   date=date, symbol=NAMES[short], fav=False))
-                    cur[cr.short] = cr
-                except:
-                    continue
+                cur[short] = self.cur[short]
         return cur
 
 

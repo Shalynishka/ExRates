@@ -66,6 +66,9 @@ Find:
             TextInput:
                 id: search
                 size_hint: .9, 1
+                write_tab: False
+                multiline: False
+                on_text_validate: root.find()
 
             Button:
                 size_hint: .1, 1
