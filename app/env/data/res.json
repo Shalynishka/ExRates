@@ -1,0 +1,23 @@
+{
+    "0": {
+        "name": "Gold",
+        "short": "0",
+        "rate": 8217.0,
+        "date": "2018-11-24",
+        "symbol": "Br"
+    },
+    "1": {
+        "name": "Silver",
+        "short": "1",
+        "rate": 86.82,
+        "date": "2018-11-24",
+        "symbol": "Br"
+    },
+    "2": {
+        "name": "Platinum",
+        "short": "2",
+        "rate": 5488.32,
+        "date": "2018-11-24",
+        "symbol": "Br"
+    }
+}

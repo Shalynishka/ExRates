@@ -1,0 +1,178 @@
+{
+    "CAD": {
+        "name": "Canadian Dollar",
+        "short": "CAD",
+        "rate": [
+            1,
+            1.5852
+        ],
+        "date": "2018-11-22",
+        "symbol": "$",
+        "fav": true
+    },
+    "SGD": {
+        "name": "Singapore Dollar",
+        "short": "SGD",
+        "rate": [
+            1,
+            1.5328
+        ],
+        "date": "2018-11-22",
+        "symbol": "$",
+        "fav": false
+    },
+    "CHF": {
+        "name": "Swiss Franc",
+        "short": "CHF",
+        "rate": [
+            1,
+            2.1167
+        ],
+        "date": "2018-11-22",
+        "symbol": "FR",
+        "fav": false
+    },
+    "GBP": {
+        "name": "Pound Sterling",
+        "short": "GBP",
+        "rate": [
+            1,
+            2.6905
+        ],
+        "date": "2018-11-22",
+        "symbol": "\u00a3",
+        "fav": false
+    },
+    "USD": {
+        "name": "US Dollar",
+        "short": "USD",
+        "rate": [
+            1,
+            2.1061
+        ],
+        "date": "2018-11-22",
+        "symbol": "$",
+        "fav": false
+    },
+    "AUD": {
+        "name": "Australian Dollar",
+        "short": "AUD",
+        "rate": [
+            1,
+            1.5251
+        ],
+        "date": "2018-11-22",
+        "symbol": "$",
+        "fav": false
+    },
+    "BGN": {
+        "name": "Bulgarian Lev",
+        "short": "BGN",
+        "rate": [
+            1,
+            1.2256
+        ],
+        "date": "2018-11-22",
+        "symbol": "lv",
+        "fav": false
+    },
+    "UAH": {
+        "name": "Hryvnia",
+        "short": "UAH",
+        "rate": [
+            100,
+            7.5854
+        ],
+        "date": "2018-11-22",
+        "symbol": "\u0433\u0440\u043d",
+        "fav": false
+    },
+    "DKK": {
+        "name": "Danish Krone",
+        "short": "DKK",
+        "rate": [
+            10,
+            3.2123
+        ],
+        "date": "2018-11-22",
+        "symbol": "kr",
+        "fav": false
+    },
+    "EUR": {
+        "name": "Euro",
+        "short": "EUR",
+        "rate": [
+            1,
+            2.399
+        ],
+        "date": "2018-11-22",
+        "symbol": "\u20ac",
+        "fav": false
+    },
+    "PLN": {
+        "name": "Zloty",
+        "short": "PLN",
+        "rate": [
+            10,
+            5.567
+        ],
+        "date": "2018-11-22",
+        "symbol": "z\u0142",
+        "fav": false
+    },
+    "RUB": {
+        "name": "Russian Ruble",
+        "short": "RUB",
+        "rate": [
+            100,
+            3.1953
+        ],
+        "date": "2018-11-22",
+        "symbol": "\u20bd",
+        "fav": false
+    },
+    "KZT": {
+        "name": "Tenge",
+        "short": "KZT",
+        "rate": [
+            1000,
+            5.7172
+        ],
+        "date": "2018-11-22",
+        "symbol": "T",
+        "fav": false
+    },
+    "TRY": {
+        "name": "Turkish Lira",
+        "short": "TRY",
+        "rate": [
+            10,
+            3.9276
+        ],
+        "date": "2018-11-22",
+        "symbol": "\u20ba",
+        "fav": false
+    },
+    "CZK": {
+        "name": "Czech Koruna",
+        "short": "CZK",
+        "rate": [
+            100,
+            9.2185
+        ],
+        "date": "2018-11-22",
+        "symbol": "K\u010d",
+        "fav": false
+    },
+    "SEK": {
+        "name": "Swedish Krona",
+        "short": "SEK",
+        "rate": [
+            10,
+            2.3217
+        ],
+        "date": "2018-11-22",
+        "symbol": "kr",
+        "fav": false
+    }
+}

@@ -1,0 +1,77 @@
+#: import paths paths
+
+Home:
+
+<Home>:
+    BoxLayout:
+        orientation: 'vertical'
+        padding: '1dp'
+        canvas:
+            Color:
+                rgb: (.88, .88, .88)
+            Rectangle:
+                pos: self.pos
+                size: self.size
+        BoxLayout:
+            padding: '5dp'
+            size_hint_y: .10
+            orientation: 'horizontal'
+            Button:
+                size_hint: None, None
+                width: '40dp'
+                height: '40dp'
+                on_press: root.manager.current = 'menu'
+                canvas:
+                    Color:
+                        rgb: (.88, .88, .88)
+                    Rectangle:
+                        pos: self.pos
+                        size: self.size
+                Image:
+                    source: paths.images + 'appIcons/menu.png'
+                    width: '40dp'
+                    height: '40dp'
+                    y: self.parent.y
+                    x: self.parent.x
+
+            Label:
+                font_size: '30dp'
+
+                text: 'ExRates'
+                color: 0,0,0,1
+
+            Button:
+                size_hint: None, None
+                width: '40dp'
+                height: '40dp'
+                on_press:root.refresh()
+                canvas:
+                    Color:
+                        rgb: (.88, .88, .88)
+                    Rectangle:
+                        pos: self.pos
+                        size: self.size
+                Image:
+                    source: paths.images + 'appIcons/refresh.png'
+                    width: '40dp'
+                    height: '40dp'
+                    y: self.parent.y
+                    x: self.parent.x
+
+        ScrollView:
+
+            #size_hint: 1, None
+            size: self.width, self.height
+
+            GridLayout:
+                id: items
+
+                cols:1
+                size_hint_y: None
+
+                row_default_height: '100dp'
+                row_force_default: True
+
+                spacing: 0, 5
+
+                height: self.minimum_height

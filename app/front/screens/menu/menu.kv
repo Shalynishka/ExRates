@@ -1,0 +1,158 @@
+#: import paths paths
+
+Menu:
+
+<Menu>:
+    BoxLayout:
+        orientation: 'vertical'
+        padding: '1dp'
+        canvas:
+            Color:
+                rgb: (.88, .88, .88)
+            Rectangle:
+                pos: self.pos
+                size: self.size
+
+        BoxLayout:
+            spacing: '10dp'
+            #size_hint: .2, .2
+            Image:
+                size_hint: .1, 1
+                source: paths.images + 'appIcons/home.png'
+                width: '40dp'
+                height: '40dp'
+                y: self.parent.y
+                x: self.parent.x
+            AnchorLayout:
+                anchor_x: 'left'
+                Label:
+                    markup: True
+                    size_hint: None, None
+                    text: '[ref=home]Home[/ref]'
+                    font_size: '30dp'
+                    color: 0,0,0,1
+                    on_ref_press: root.manager.current = 'home'
+
+        BoxLayout:
+            spacing: '10dp'
+            #size_hint: .2, .2
+            Image:
+                size_hint: .1, 1
+                source: paths.images + 'appIcons/cur.png'
+                width: '40dp'
+                height: '40dp'
+                y: self.parent.y
+                x: self.parent.x
+            AnchorLayout:
+                padding: '50dp'
+                anchor_x: 'left'
+                Label:
+                    markup: True
+                    size_hint: None, None
+                    text: '[ref=all currencies]All currencies[/ref]'
+                    font_size: '30dp'
+                    color: 0,0,0,1
+                    on_ref_press: root.manager.current = 'all'
+        BoxLayout:
+            spacing: '10dp'
+            #size_hint: .2, .2
+            Image:
+                size_hint: .1, 1
+                source: paths.images + 'appIcons/find.png'
+                width: '40dp'
+                height: '40dp'
+                y: self.parent.y
+                x: self.parent.x
+            AnchorLayout:
+                padding: '50dp'
+                anchor_x: 'left'
+                Label:
+                    markup: True
+                    size_hint: None, None
+                    text: '[ref=Find currency]Find currency[/ref]'
+                    font_size: '30dp'
+                    color: 0,0,0,1
+                    on_ref_press: root.manager.current = 'find'
+
+        BoxLayout:
+            spacing: '10dp'
+            #size_hint: .2, .2
+            Image:
+                size_hint: .1, 1
+                source: paths.images + 'appIcons/res.png'
+                width: '40dp'
+                height: '40dp'
+                y: self.parent.y
+                x: self.parent.x
+            AnchorLayout:
+                padding: '30dp'
+                anchor_x: 'left'
+                Label:
+                    markup: True
+                    size_hint: None, None
+                    text: '[ref=Resource]Resources[/ref]'
+                    font_size: '30dp'
+                    color: 0,0,0,1
+                    on_ref_press: root.manager.current = 'res'
+
+        BoxLayout:
+            spacing: '10dp'
+            #size_hint: .2, .2
+            Image:
+                size_hint: .1, 1
+                source: paths.images + 'appIcons/crypt.png'
+                width: '40dp'
+                height: '40dp'
+                y: self.parent.y
+                x: self.parent.x
+            AnchorLayout:
+                padding: '60dp'
+                anchor_x: 'left'
+                Label:
+                    markup: True
+                    size_hint: None, None
+                    text: '[ref=Cryptocurrency]Cryptocurrency[/ref]'
+                    font_size: '30dp'
+                    color: 0,0,0,1
+                    on_ref_press: root.manager.current = 'crypt'
+
+        BoxLayout:
+            #size_hint: .2, .2
+            Image:
+                size_hint: .1, 1
+                source: paths.images + 'appIcons/convert.png'
+                width: '40dp'
+                height: '40dp'
+                y: self.parent.y
+                x: self.parent.x
+            AnchorLayout:
+                padding: '35dp'
+                anchor_x: 'left'
+                Label:
+                    markup: True
+                    size_hint: None, None
+                    text: '[ref=Converter]Converter[/ref]'
+                    font_size: '30dp'
+                    color: 0,0,0,1
+                    on_ref_press: root.manager.current = 'convert'
+
+        BoxLayout:
+            #size_hint: .2, .2
+            Image:
+                size_hint: .1, 1
+                source: paths.images + 'appIcons/settings.png'
+                width: '40dp'
+                height: '40dp'
+                y: self.parent.y
+                x: self.parent.x
+
+            AnchorLayout:
+                anchor_x: 'left'
+                padding: '25dp'
+                Label:
+                    markup: True
+                    size_hint: None, None
+                    text: '[ref=Settings]Settings[/ref]'
+                    font_size: '30dp'
+                    color: 0,0,0,1
+                    on_ref_press: root.manager.current = 'settings'

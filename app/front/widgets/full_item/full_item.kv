@@ -1,0 +1,64 @@
+FullItem:
+
+<FullItem>:
+    orientation: 'vertical'
+    padding: '5dp'
+    size_hint: 1, None
+    size_y: '100dp'
+    item_property: image
+    canvas:
+        Color:
+            rgb: (.88, .88, .88)
+        Rectangle:
+            pos: self.pos
+            size: self.size
+    #Flag
+    BoxLayout
+        size_hint: 1, .9
+        Image:
+            size_hint: .2, 1
+            id: image
+            source: 'images\\appIcons\\menu.png'
+            width: '40dp'
+            height: '40dp'
+            y: self.parent.y
+            x: self.parent.x
+        GridLayout:
+            spacing: '30dp'
+            padding: '20dp'
+            rows: 2
+            AnchorLayout:
+                Label:
+                    color: 0,0,0,1
+                    font_size: '20dp'
+                    text: root.item.short + ' 1 ' + root.item.symbol + ' ' + str(root.item.rate) + ' Br'
+            AnchorLayout:
+                Label:
+                    color: 0,0,0,1
+                    font_size: '20dp'
+                    text: root.item.name
+        Image:
+            size_hint: .2, 1
+            id: star
+            source: 'images\\appIcons\\star.png'
+            width: '40dp'
+            height: '40dp'
+            y: self.parent.y
+            x: self.parent.x
+    AnchorLayout:
+        size_hint: 1, .19
+        anchor_x: 'right'
+        Label:
+            size_hint: None, None
+            text: str(root.item.date)
+            color: 0,0,0,1
+
+    Label:
+        size_hint: 1, None
+        height: '1dp'
+        canvas:
+            Color:
+                rgb: (0, 0, 0)
+            Rectangle:
+                pos: self.pos
+                size: self.size
