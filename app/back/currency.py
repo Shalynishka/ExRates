@@ -1,5 +1,5 @@
 ﻿from back.item import Item
-
+import json
 
 class Currency(Item):
     """
@@ -37,6 +37,9 @@ class Currency(Item):
                 'date': self.date,
                 'symbol': self.symbol,
                 'fav': self.fav_s}
+
+    def __str__(self):
+        return self.short + ' 1 ' + self.symbol + ' ' + str(self.rate) + ' Br'
 
     """symbol of currency"""
     @property

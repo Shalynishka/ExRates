@@ -1,4 +1,5 @@
-﻿class Item:
+﻿
+class Item:
     """
     Class for Item. It contains general characteristics for Currencies and Resources
     Attributes:
@@ -30,9 +31,9 @@
     def __init__(self, **kwargs):   # (name: str, s_n: str, icon, rate: float, date: datetime.date)
         self.__name = kwargs['name']
         self.__short = kwargs['short']
-        self.__icon = kwargs['short'] + '.atr'
+        self.__icon = kwargs['short'] + '.png'
         self.__rate = kwargs['rate']
-        self.__date = kwargs['date']
+        self.__date = str(kwargs['date'])
 
     """name of item"""
     @property

@@ -12,7 +12,6 @@ class Resource(Item):
 
             __init__(self, name, s_n, icon, rate, date, s, f)
             __dict__(self) - return all info in dict
-
     """
 
     def __init__(self, **kwargs):   # (self, name: str, s_n: str, icon, rate: float, date: datetime.date):
@@ -25,3 +24,4 @@ class Resource(Item):
                 'rate': self.rate,
                 'date': self.date,
                 'symbol': 'Br'}
+
