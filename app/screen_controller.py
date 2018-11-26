@@ -44,12 +44,17 @@ sm.add_widget(Menu(name='menu'))
 
 """CurScreenController"""
 h = Home(name='home')
-sm.add_widget(h)
 a = AllCur(name='all')
-sm.add_widget(a)
 
 csc = CursScreenController(h, a, cur_controller)
+
+h.controller = csc.refresh
+a.controller = csc.refresh
 csc.load()
+
+sm.add_widget(a)
+sm.add_widget(h)
+
 
 crypts = Crypts(name='crypt')
 crypts.controller = cr_controller

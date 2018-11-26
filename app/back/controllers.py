@@ -126,24 +126,23 @@ class CurController(Controller):
         cr = {}
         fv = {}
         date = datetime.date(datetime.now())
-        i = -1
         for c in NAMES.keys():
-            i += 1
             try:
-                r = requests.get('http://www.nbrb.by/API/ExRates/Rates/{}?ParamMode=2'.format(c[0])).json()
+                r = requests.get('http://www.nbrb.by/API/ExRates/Rates/{}?ParamMode=2'.format(c)).json()
                 rate = [r['Cur_Scale'], r['Cur_OfficialRate']]
                 d = requests.get('http://www.nbrb.by/API/ExRates/Currencies/' + str(r['Cur_ID'])).json()
                 # функция для замены файла курсов. Все данные берутся из кортежа. (на случай, если файл затеряется)
                 # именно поэтому тут такое шаманство
                 egg = (Currency(name=d['Cur_Name_Eng'], short=d['Cur_Abbreviation'],
-                                rate=rate, date=date, symbol=NAMES[c], fav=self.cur[i].fav_s if self.fav else False))
+                                rate=rate, date=date, symbol=NAMES[c], fav=self.cur[c].fav_s if self.fav else False))
                 cr[d['Cur_Abbreviation']] = egg
-                if self.cur and self.cur[egg.short]['fav']:
+                if self.cur and self.cur[c].fav_s:
                     fv[egg.short] = egg
-            except:
-                print('problem')
-                continue
-        print(cr)
+            except ConnectionError as e:
+                print('Connection error', e)
+                return
+            except Exception as e:
+                print('Error in update', e)
         if cr:
             self.__cur = cr
             self.__fav_cur = fv
