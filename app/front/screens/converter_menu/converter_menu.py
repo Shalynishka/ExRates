@@ -9,7 +9,3 @@ class ConvertMenu(Screen):
     def load(self, add):
         for name in NAMES.keys():
             self.ids['items'].add_widget(ReduceItem(name).build(add))
-
-    # def add(self, *arg):
-    #     print('hello', arg[0].id)
-

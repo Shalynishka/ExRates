@@ -138,11 +138,10 @@ class CurController(Controller):
                 cr[d['Cur_Abbreviation']] = egg
                 if self.cur and self.cur[c].fav_s:
                     fv[egg.short] = egg
-            except ConnectionError as e:
-                print('Connection error', e)
-                return
             except Exception as e:
-                print('Error in update', e)
+                print('hello')
+                print('Connection error', e)
+                return False
         if cr:
             self.__cur = cr
             self.__fav_cur = fv

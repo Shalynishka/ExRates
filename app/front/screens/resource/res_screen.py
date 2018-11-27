@@ -25,4 +25,3 @@ class Res(Screen):
             self.ids['items'].remove_widget(self.ids['items'].children[0])
         self.c.update_res()
         self.load()
-        print('what22')

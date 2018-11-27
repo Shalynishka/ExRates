@@ -57,7 +57,15 @@ Res:
                     height: '40dp'
                     y: self.parent.y
                     x: self.parent.x
-
+        Label:
+            size_hint: 1, None
+            height: '1dp'
+            canvas:
+                Color:
+                    rgb: (0, 0, 0)
+                Rectangle:
+                    pos: self.pos
+                    size: self.size
         ScrollView:
 
             #size_hint: 1, None

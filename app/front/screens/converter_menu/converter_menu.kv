@@ -39,7 +39,15 @@ ConvertMenu:
 
                 text: 'Choose currencies'
                 color: 0,0,0,1
-
+        Label:
+            size_hint: 1, None
+            height: '1dp'
+            canvas:
+                Color:
+                    rgb: (0, 0, 0)
+                Rectangle:
+                    pos: self.pos
+                    size: self.size
         ScrollView:
 
             #size_hint: 1, None

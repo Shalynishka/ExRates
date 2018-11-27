@@ -18,10 +18,11 @@ class Convert(Screen):
         self.ids['items'].add_widget(item)
 
     def add(self, short):
-        item = ConvertItem(self.c.cur[short.id]).build(self.convert)
-        self.curs[short.id] = item
-        self.cv.rates = self.c.cur[short.id]
-        self.ids['items'].add_widget(item)
+        if short.id not in self.curs.keys():
+            item = ConvertItem(self.c.cur[short.id]).build(self.convert)
+            self.curs[short.id] = item
+            self.cv.rates = self.c.cur[short.id]
+            self.ids['items'].add_widget(item)
 
     def convert(self, zero_name, addition):
         num = self.curs[zero_name].input.text + addition

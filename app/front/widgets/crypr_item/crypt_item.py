@@ -15,9 +15,7 @@ class CryptItem:
 
     def build(self):
         root = BoxLayout(orientation='vertical', padding='5dp', size_hint=(1, None))
-        # root.id = self.item.short
         root.size_y = '100dp'
-        # root.item_property = 'image'
         with root.canvas:
             Color(.88, .88, .88)
             Rectangle(pos=root.pos, size=root.size)
@@ -62,13 +60,6 @@ class CryptItem:
         # root.add_widget(a4)
 
         root.add_widget(b)
-        # l4 = Label(size_hint=(1, None), height='1dp')
-        #
-        # with l4.canvas:
-        #     Color(0, 0, 0, 1)
-        #     Rectangle(pos=root.pos, size=root.size)
-        #
-        # root.add_widget(l4)
 
         return root
 

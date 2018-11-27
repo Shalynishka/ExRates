@@ -17,9 +17,7 @@ class FullItem:
 
     def build(self):
         root = BoxLayout(orientation='vertical', padding='5dp', size_hint=(1, None))
-        # root.id = self.item.short
         root.size_y = '100dp'
-        # root.item_property = 'image'
         with root.canvas:
             Color(.88, .88, .88)
             Rectangle(pos=root.pos, size=root.size)
@@ -30,8 +28,6 @@ class FullItem:
         ai.add_widget(i1)
         i1.width = '90dp'
         i1.height = '90dp'
-        # i1.y = b.y + 100
-        # i1.x = b.x + 100
 
         b.add_widget(ai)
 
@@ -73,22 +69,7 @@ class FullItem:
         a3.add_widget(l3)
         g.add_widget(a3)
 
-        # l4 = Label(size_hint=(1, None), height='1dp')
-        #
-        # with l4.canvas:
-        #     Color(0, 0, 0, 1)
-        #     Rectangle(pos=root.pos, size=root.size)
-        #
-        # root.add_widget(l4)
-
         return root
 
     def fav(self):
-        # if self.item.fav_s:
-        #     self.item.fav_s = False
-        #     self.star.background_normal = 'images\\appIcons\\star.png'
-        # else:
-        #     self.item.fav_s = True
-        #     self.star.background_normal = 'images\\appIcons\\starT.png'
-
         self.change_fav(self.item, self.star)

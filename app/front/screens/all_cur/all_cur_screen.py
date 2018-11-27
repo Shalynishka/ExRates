@@ -5,9 +5,6 @@ from kivy.uix.screenmanager import Screen
 
 
 class AllCur(Screen):
-    # c = None
-    # h = None
-    # fav = {}
     controller = None
 
     def __init__(self, **kw):

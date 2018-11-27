@@ -2,6 +2,10 @@ from front.widgets.full_item.full_item import FullItem
 
 import paths
 
+# from plyer import vibrator
+from kivy.uix.popup import Popup
+from kivy.uix.label import Label
+
 
 class CursScreenController:
     fav = {}
@@ -28,14 +32,17 @@ class CursScreenController:
 
     """refresh"""
     def refresh(self):
-        while self.home.ids['items'].children:
-            self.home.ids['items'].remove_widget(self.home.ids['items'].children[0])
+        if self.controller.update_cur() is False:
+            popup = Popup(title='Error', content=Label(text='No Internet connection'), size_hint=(.8, .8))
+            popup.open()
+        else:
+            while self.home.ids['items'].children:
+                self.home.ids['items'].remove_widget(self.home.ids['items'].children[0])
 
-        while self.all.ids['items'].children:
-            self.all.ids['items'].remove_widget(self.all.ids['items'].children[0])
+            while self.all.ids['items'].children:
+                self.all.ids['items'].remove_widget(self.all.ids['items'].children[0])
 
-        self.controller.update_cur()
-        self.load()
+            self.load()
 
     def change_fav(self, item, widget):
         if not item.fav_s:
@@ -50,7 +57,6 @@ class CursScreenController:
             self.del_fav(item.short)
             widget.background_normal = paths.images + 'appIcons/star.png'
             self.cur[item.short].star.background_normal = paths.images + 'appIcons/star.png'
-            # widget.background_normal = 'images\\appIcons\\star.png'
 
     def del_fav(self, short):
         self.home.ids['items'].remove_widget(self.fav[short])
@@ -62,4 +68,3 @@ class CursScreenController:
         fi1 = FullItem(item, self.change_fav).build()
         self.home.ids['items'].add_widget(fi1)
         self.fav[item.short] = fi1
-        # widget.background_normal = 'images\\appIcons\\starT.png'
