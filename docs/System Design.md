@@ -115,7 +115,7 @@ Sequence diagram is [here](https://github.com/Shalynishka/ExRates/blob/master/do
 
 # 5. Class Diagram <a name = "5"></a>
 
-Class diagram is [here](https://github.com/Shalynishka/ExRates/blob/master/docs/Diagrams/Class.png).
+Class diagram is [here](https://github.com/Shalynishka/ExRates/blob/master/docs/Diagrams/ClassD.png).
 
 # 6. Deployment Diagram <a name = "6"></a>
 
