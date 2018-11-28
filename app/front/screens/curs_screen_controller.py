@@ -1,10 +1,9 @@
+from kivy.uix.popup import Popup
+from kivy.uix.label import Label
+
 from front.widgets.full_item.full_item import FullItem
 
 import paths
-
-# from plyer import vibrator
-from kivy.uix.popup import Popup
-from kivy.uix.label import Label
 
 
 class CursScreenController:
@@ -27,7 +26,7 @@ class CursScreenController:
                     fi1 = FullItem(i, self.change_fav).build()
                     self.fav[i.short] = fi1
                     self.home.ids['items'].add_widget(fi1)
-            except:
+            except Exception:
                 continue
 
     """refresh"""
@@ -47,7 +46,7 @@ class CursScreenController:
     def change_fav(self, item, widget):
         if not item.fav_s:
             self.controller.cur[item.short].fav_s = True
-            self.controller.fav[item.short] = item          # todo в общем листе данный item должен изменить свой статус. А потом это сохранять
+            self.controller.fav[item.short] = item
             widget.background_normal = paths.images + 'appIcons/starT.png'
             self.cur[item.short].star.background_normal = paths.images + 'appIcons/starT.png'
             self.add_fav(item)

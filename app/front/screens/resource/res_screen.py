@@ -1,5 +1,6 @@
-from front.widgets.res_item.res_item import ResItem
 from kivy.uix.screenmanager import Screen
+
+from front.widgets.res_item.res_item import ResItem
 
 
 class Res(Screen):

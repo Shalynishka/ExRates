@@ -1,6 +1,6 @@
 from kivy.uix.boxlayout import BoxLayout
-from kivy.uix.image import Image
 from kivy.uix.anchorlayout import AnchorLayout
+from kivy.uix.image import Image
 from kivy.graphics import Color, Rectangle
 from kivy.uix.button import Button
 

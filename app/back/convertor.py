@@ -26,8 +26,9 @@ class Converter:
     def del_rate(self, short):                       # отправить только имя
         self.__rates.pop(short)
 
-    """zero-тот, кого надо конвертировать(ему ввели число)"""
     def convert(self, rate_name: str, num: float) -> dict:
+        """zero-тот, кого надо конвертировать(ему ввели число)"""
+
         answer = {}
         if rate_name == 'BYN':
             answer['BYN'] = num

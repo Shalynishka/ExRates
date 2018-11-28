@@ -1,5 +1,7 @@
 from kivy.uix.screenmanager import Screen
+
 from front.widgets.reduce_item.reduce_item import ReduceItem
+
 from back.controllers import NAMES
 
 

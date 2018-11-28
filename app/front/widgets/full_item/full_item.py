@@ -1,8 +1,8 @@
 from kivy.uix.boxlayout import BoxLayout
+from kivy.uix.anchorlayout import AnchorLayout
 from kivy.uix.image import Image
 from kivy.uix.button import Button
 from kivy.uix.label import Label
-from kivy.uix.anchorlayout import AnchorLayout
 from kivy.graphics import Color, Rectangle
 
 import paths

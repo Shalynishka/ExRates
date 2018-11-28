@@ -1,5 +1,6 @@
-from front.widgets.crypr_item.crypt_item import CryptItem
 from kivy.uix.screenmanager import Screen
+
+from front.widgets.crypr_item.crypt_item import CryptItem
 
 
 class Crypts(Screen):

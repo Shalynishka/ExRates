@@ -1,6 +1,8 @@
 from kivy.uix.screenmanager import Screen
-from back.currency import Currency
+
 from front.widgets.convert_item.convert_item import ConvertItem
+
+from back.currency import Currency
 from back.convertor import Converter
 
 br = Currency(name='Belarusian ruble', short='BYN', rate=1, date=0, symbol='Br', fav=True)

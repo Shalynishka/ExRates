@@ -1,5 +1,5 @@
 ﻿from back.item import Item
-import json
+
 
 class Currency(Item):
     """
@@ -15,13 +15,10 @@ class Currency(Item):
             __init__(self, name, s_n, icon, rate, date, s, f)
             __dict__(self) - return all info in dict
 
-            properties(getter~+setter):
-                symbol
-                fav
     """
 
-    __symbol = ''
-    __fav_status = False
+    symbol = ''     # currency symbol
+    fav_s = False   # favorite status
 
     # (self, name: str, short: str, icon, rate: float, date: datetime.date, symbol: str, fav: bool):
     def __init__(self, **kwargs):
@@ -29,8 +26,9 @@ class Currency(Item):
         self.__symbol = kwargs['symbol']
         self.__fav_status = kwargs['fav']
 
-    """get info"""
     def __dict__(self) -> dict:
+        """get info"""
+
         return {'name': self.name,
                 'short': self.short,
                 'rate': self.rate,
@@ -40,21 +38,3 @@ class Currency(Item):
 
     def __str__(self):
         return self.short + ' 1 ' + self.symbol + ' ' + str(self.rate) + ' Br'
-
-    """symbol of currency"""
-    @property
-    def symbol(self):
-        return self.__symbol
-
-    @symbol.setter
-    def symbol(self, s):
-        self.__symbol = s
-
-    """favorite status"""
-    @property
-    def fav_s(self):
-        return self.__fav_status
-
-    @fav_s.setter
-    def fav_s(self, f):
-        self.__fav_status = f

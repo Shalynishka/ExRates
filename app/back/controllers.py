@@ -1,10 +1,11 @@
 ﻿import json
+import requests
+import os
+from datetime import datetime
+
 from back.currency import Currency
 from back.crypt import Crypt
 from back.resource import Resource
-from datetime import datetime
-import requests
-import os
 
 import paths
 
@@ -85,8 +86,8 @@ class CurController(Controller):
         fav -> __fav - setter and getter~
     """
 
-    __cur = {}
-    __fav_cur = {}
+    __cur = {}          # list of currency
+    __fav_cur = {}      # list of favorite currencies
 
     def __init__(self):
         for (n, v) in self.load(paths.data + 'cur.json').items():
@@ -94,7 +95,6 @@ class CurController(Controller):
             if v['fav']:
                 self.__fav_cur[n] = self.cur[n]
 
-    """list of currency"""
     @property
     def cur(self):
         return self.__cur
@@ -103,7 +103,6 @@ class CurController(Controller):
     def cur(self, c):
         self.__cur[c.short] = c
 
-    """list of favorite currencies"""
     @property
     def fav(self):
         return self.__fav_cur
@@ -112,17 +111,17 @@ class CurController(Controller):
     def fav(self, f):
         self.__cur[f.short] = f
 
-    """delete from favorites"""
-    def del_fav(self, short):   # todo возможно добавить обработку исключения отсутствия индекса. Возможно.
+    def del_fav(self, short):
+        """delete from favorites"""
         shorts = [r.short for r in self.fav]
         self.__fav_cur.pop(shorts.index(short))
 
-    """
-    update all currency + create file with them
-    fresh file!
-    """
-    # todo сделать работу со словарем
-    def update_cur(self):
+    def update_cur(self) -> bool:
+        """
+           update all currency + create file with them
+           fresh file!
+        """
+
         cr = {}
         fv = {}
         date = datetime.date(datetime.now())
@@ -138,18 +137,18 @@ class CurController(Controller):
                 cr[d['Cur_Abbreviation']] = egg
                 if self.cur and self.cur[c].fav_s:
                     fv[egg.short] = egg
-            except Exception as e:
-                print('hello')
-                print('Connection error', e)
+            except Exception:
                 return False
         if cr:
             self.__cur = cr
             self.__fav_cur = fv
             self.clear(paths.data + 'cur.json')
             self.store(paths.data + 'cur.json', cr)
+            return True
 
-    """find currency"""
     def find_cur(self, name: str) -> dict:
+        """find currency"""
+
         cur = {}
         with open(paths.data + 'find.json', 'r') as f:
             items_list = json.loads(f.read())
@@ -185,7 +184,7 @@ class ResController(Controller):
     def res(self, r):
         self.__res[r.short] = r
 
-    def update_res(self):
+    def update_res(self) -> bool:
         try:
             r = {}
             date = datetime.date(datetime.today())
@@ -196,12 +195,13 @@ class ResController(Controller):
                     if d['MetalID'] == i and d['Nominal'] == 100.0:
                         rate = d['CertificateRubles']
                 r[str(i)] = (Resource(name=names[i]['NameEng'], short=str(i), date=date, rate=rate))
-        except:
-            return
+        except Exception:
+            return False
         if r:
             self.__res = r
             self.clear(paths.data + 'res.json')
             self.store(paths.data + 'res.json', self.res)
+            return True
 
 
 class CryptController(Controller):
@@ -230,16 +230,17 @@ class CryptController(Controller):
     def crypt(self, cr):
         self.__crypt[cr.short] = cr
 
-    def update_crypt(self):
+    def update_crypt(self) -> bool:
         try:
             crypts = {}
             date = datetime.date(datetime.today())
             for d in CRYPTS:
                 cr = requests.get('https://min-api.cryptocompare.com/data/price?fsym={}&tsyms=USD'.format(d)).json()
                 crypts[d] = Crypt(name=CRYPTS[d], short=d, date=date, rate=cr['USD'])
-        except:
-            return
+        except Exception:
+            return False
         if crypts:
             self.__crypt = crypts
             self.clear(paths.data + 'crypt.json')
             self.store(paths.data + 'crypt.json', self.crypt)
+            return True

@@ -17,8 +17,9 @@ class Resource(Item):
     def __init__(self, **kwargs):   # (self, name: str, s_n: str, icon, rate: float, date: datetime.date):
         super().__init__(**kwargs)
 
-    """get info"""
     def __dict__(self) -> dict:
+        """get info"""
+
         return {'name': self.name,
                 'short': self.short,
                 'rate': self.rate,

@@ -18,8 +18,9 @@ class Crypt(Item):
     def __init__(self, **kwargs):
         super().__init__(**kwargs)
 
-    """get info"""
     def __dict__(self) -> dict:
+        """get info"""
+
         return {'name': self.name,
                 'short': self.short,
                 'rate': self.rate,

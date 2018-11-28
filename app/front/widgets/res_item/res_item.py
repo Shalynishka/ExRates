@@ -1,8 +1,8 @@
 from kivy.uix.boxlayout import BoxLayout
 from kivy.uix.gridlayout import GridLayout
+from kivy.uix.anchorlayout import AnchorLayout
 from kivy.uix.image import Image
 from kivy.uix.label import Label
-from kivy.uix.anchorlayout import AnchorLayout
 from kivy.graphics import Color, Rectangle
 
 import paths
@@ -21,7 +21,7 @@ class ResItem:
             Rectangle(pos=root.pos, size=root.size)
 
         b = BoxLayout(size_hint=(1, .9))
-        i1 = Image(size_hint=(None, None), source=paths.images + 'res/{}.svg'.format(self.item.name))   # todo crypt icons
+        i1 = Image(size_hint=(None, None), source=paths.images + 'res/{}.svg'.format(self.item.name))
         i1.width = '55dp'
         i1.height = '55dp'
 
@@ -56,7 +56,6 @@ class ResItem:
         g0 = GridLayout(spacing='30dp', padding='20dp', rows=2)
         g0.add_widget(b1)
         g0.add_widget(b2)
-        ####
 
         b.add_widget(g0)
         root.add_widget(b)

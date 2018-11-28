@@ -1,7 +1,6 @@
 from kivy.uix.screenmanager import Screen
 
 
-# todo передавать сюда виджет для удаления. Либо его имя.
 class Home(Screen):
     controller = None
 
