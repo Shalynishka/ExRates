@@ -64,7 +64,7 @@ This application will be tested manually.
 
 # 6. Pass/Fail Criteria <a name = "6"></a>
 
-Results of testing are represented in this document.
+Results of testing are represented in this [document](https://github.com/Shalynishka/ExRates/blob/master/docs/Test%20Results.md).
 
 # 7. Conclusion <a name = "7"></a>
 
