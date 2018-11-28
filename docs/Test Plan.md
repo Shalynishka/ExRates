@@ -56,7 +56,7 @@ During testing process planned to check correctness of implementation followed m
 It is also important to check correctness of non-functional requirements:
 
 - Usability: All elements must have restrained tones and must be readable..
-- Reliability of information: The product must provide the most current information on the exchange rate and resources.
+- Reliability of information: The product must provides the most current information on the exchange rate and resources. In case of no Internet access the product must shows the previous updates.
 
 # 5. Test Approach <a name = "5"></a>
 
